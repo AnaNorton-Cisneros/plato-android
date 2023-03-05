@@ -45,15 +45,15 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.RowScope
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 // ^^^
 /**
  * This section between the commented arrows below are examples
@@ -99,16 +99,26 @@ class MainActivity : ComponentActivity() {
              * text that follows it is a comment. This text won't run like code,
              * it's just so you can leave helpful notes like this one :)
              */
-            // YOUR TEST AREA vvv
+
             Text(text="HEllO WORLD!")
-            BottomAppBar {
-              IconButton(onClick = { /* doSomething() */ }) {
-                Icon(Icons.Filled.Menu, contentDescription = "Localized description")
+Button(onClick = {/*TODO*/}) {
+/*CONTENT*/
+}
+              Card(Modifier.size(width = 180.dp, height = 100.dp)) {
+                  Box(Modifier.fillMaxSize()) {
+                      Text("Clickable", Modifier.align(Alignment.Center))
+                  }
               }
-            }
-            TodoList(title = "My todo list")
-            // ^^^^^ add above ^^^^^
-            // ^^^ YOUR TEST AREA
+
+              BottomAppBar {
+                  IconButton(onClick = { /* doSomething() */ }) {
+                      Icon(Icons.Filled.Menu, contentDescription = "Localized description")
+                  }
+              }
+              TodoList(title = "My todo list")
+              // ^^^^^ add above ^^^^^
+              // ^^^ YOUR TEST AREA
+
           }
         }
       }
