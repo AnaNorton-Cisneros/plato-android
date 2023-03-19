@@ -100,22 +100,9 @@ class MainActivity : ComponentActivity() {
              * it's just so you can leave helpful notes like this one :)
              */
 
-            Text(text="HEllO WORLD!")
-Button(onClick = {/*TODO*/}) {
-/*CONTENT*/
-}
-              Card(Modifier.size(width = 180.dp, height = 100.dp)) {
-                  Box(Modifier.fillMaxSize()) {
-                      Text("Clickable", Modifier.align(Alignment.Center))
-                  }
-              }
 
-              BottomAppBar {
-                  IconButton(onClick = { /* doSomething() */ }) {
-                      Icon(Icons.Filled.Menu, contentDescription = "Localized description")
-                  }
-              }
               TodoList(title = "My todo list")
+
               // ^^^^^ add above ^^^^^
               // ^^^ YOUR TEST AREA
 

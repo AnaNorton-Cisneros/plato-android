@@ -106,7 +106,14 @@ fun TodoList(title: String) {
   Column() {
     Title(title = title)
     // We need to add some to-do items here below vvv
-
+    ToDoListRow(taskName = "wash the dishes")
+    ToDoListRow(taskName = "sweep floors")
+    ToDoListRow(taskName = "make bed")
+    ToDoListRow(taskName = "fold laundry")
+    TextField(value = "", onValueChange = {})
+    Button(onClick = {/*TODO*/}){
+      Text(text = "add item")
+    }
     // ^^^ Add to-do list items above
   }
 }
@@ -119,3 +126,14 @@ fun Title(title: String) {
 }
 
 // Create a new composable here vvv
+@Composable
+fun ToDoListRow(taskName: String) {
+  Row {
+    Icon(
+      imageVector = Icons.Filled.CheckCircle,
+      contentDescription = "Checkmark",
+    )
+    Spacer(modifier = Modifier.width(12.dp))
+    Text(text = taskName)
+  }
+}
